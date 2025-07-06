@@ -1,0 +1,98 @@
+.ai-mic-button {
+    position: absolute;
+    top: 5rem; /* adjust as needed */
+    right: 1rem;
+    z-index: 50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.25);
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .ai-mic-button:hover, .ai-mic-button:focus {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.35);
+    transform: scale(1.08);
+  }
+  
+  .ai-mic-button:active {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.18);
+    transform: scale(0.97);
+  }
+
+  .ai-mic-button.clicked {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    transform: scale(0.95);
+    box-shadow: 0 0 0 8px rgba(67, 233, 123, 0.3);
+    transition: all 0.2s ease;
+  }
+  
+  .ai-mic-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 24px 8px rgba(102, 126, 234, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  
+  .ai-mic-button:hover::after {
+    opacity: 1;
+    animation: ai-mic-glow 1.2s infinite alternate;
+  }
+  
+  @keyframes ai-mic-glow {
+    0% { box-shadow: 0 0 24px 8px rgba(102, 126, 234, 0.15);}
+    100% { box-shadow: 0 0 36px 16px rgba(102, 126, 234, 0.25);}
+  }
+
+/* Loading spinner styles */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.spinner-ring {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+  width: 16px;
+  height: 16px;
+  animation-delay: -0.2s;
+}
+
+.spinner-ring:nth-child(3) {
+  width: 12px;
+  height: 12px;
+  animation-delay: -0.4s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

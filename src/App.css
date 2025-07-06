@@ -1,0 +1,301 @@
+.ai-mic-button {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    z-index: 50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.25);
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .ai-mic-button:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.35);
+    transform: scale(1.08);
+  }
+  
+  .ai-mic-button:active {
+    transform: scale(0.97);
+  }
+  
+  .ai-mic-button .mic-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  
+  .ai-mic-button.listening .mic-icon {
+    animation: mic-rotate 1.2s linear infinite;
+  }
+  
+  @keyframes mic-rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  /* Listening soundwave animation */
+  .listening-waves {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .ai-mic-button.listening .listening-waves {
+    opacity: 1;
+  }
+  
+  .wave {
+    display: block;
+    width: 6px;
+    height: 18px;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 0.7;
+    animation: wave-bounce 1s infinite;
+  }
+  
+  .wave1 { animation-delay: 0s; }
+  .wave2 { animation-delay: 0.2s; }
+  .wave3 { animation-delay: 0.4s; }
+  
+  @keyframes wave-bounce {
+    0%, 100% { height: 10px; opacity: 0.5; }
+    50% { height: 22px; opacity: 1; }
+  }
+  
+  .ai-mic-button.listening {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 0 0 6px rgba(67, 233, 123, 0.15);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ai-mic-button {
+      width: 48px;
+      height: 48px;
+      top: 4rem;
+      right: 0.75rem;
+    }
+    
+    .ai-mic-button svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+/* Modal slide-in animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+/* Slide in from right to center animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Speech stopped state */
+.ai-mic-button.speech-stopped {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.15);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* AI Logo Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes brainGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+  }
+}
+
+.brain-glow {
+  animation: brainGlow 2s ease-in-out infinite;
+}
+
+@keyframes neuralPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.neural-pulse {
+  animation: neuralPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-3px) translateX(2px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px) translateX(-1px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-2px) translateX(3px);
+    opacity: 0.9;
+  }
+}
+
+.particle-float {
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+/* AI Button Animations */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* AI Button Hover Effects */
+.ai-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+.ai-button:active {
+  transform: scale(0.98);
+}
+
+/* Gradient text animation */
+@keyframes gradient-animate {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-animate 3s ease infinite;
+}

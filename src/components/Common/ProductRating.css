@@ -1,0 +1,165 @@
+/* ProductRating Component Styles */
+
+.rating-stars {
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-stars:hover {
+  transform: scale(1.05);
+}
+
+.rating-form {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.rating-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .rating-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star-rating .star {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.star-rating .star:hover {
+  transform: scale(1.1);
+}
+
+.star-rating .star.filled {
+  color: #fbbf24;
+}
+
+.star-rating .star.empty {
+  color: #6b7280;
+}
+
+.rating-input {
+  background: rgba(55, 65, 81, 0.8);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-input:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.rating-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-button:hover {
+  transform: translateY(-1px);
+}
+
+.rating-button:active {
+  transform: translateY(0);
+}
+
+.review-avatar {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  transition: all 0.2s ease-in-out;
+}
+
+.review-avatar:hover {
+  transform: scale(1.05);
+}
+
+.review-date {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.review-content {
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.rating-stats {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8), rgba(31, 41, 55, 0.8));
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-stats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rating-form-container {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8), rgba(31, 41, 55, 0.8));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.rating-form-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.success-message {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.error-message {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
