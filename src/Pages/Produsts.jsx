@@ -112,10 +112,19 @@ function Products() {
 
   const getIntent = async (speechText) => {
     try {
+      console.log("Attempting to connect to:", API_ENDPOINTS.PREDICT_INTENT);
+      console.log("Sending text:", speechText);
+      
       const response = await axios.post(API_ENDPOINTS.PREDICT_INTENT, {
         text: speechText
+      }, {
+        timeout: 30000, // Increased timeout to 30 seconds
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
 
+      console.log("Response received:", response.data);
       const data = response.data;
       return {
         category: data.intent?.toLowerCase() || "",
@@ -123,6 +132,22 @@ function Products() {
       };
     } catch (error) {
       console.error("Error fetching intent:", error.message);
+      console.error("Error details:", {
+        status: error.response?.status,
+        statusText: error.response?.statusText,
+        data: error.response?.data,
+        config: {
+          url: error.config?.url,
+          method: error.config?.method,
+          timeout: error.config?.timeout
+        }
+      });
+      
+      // Check if it's a timeout error
+      if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+        console.error("Request timed out - Python backend might be slow or not responding");
+      }
+      
       return { category: "", price: null };
     }
   };

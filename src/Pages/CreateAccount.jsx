@@ -277,7 +277,7 @@ const CreateAccount = () => {
                             </div>
 
                             {/* Username Field */}
-                            <div>
+                    <div>
                                 <label htmlFor="username" className="block text-sm font-medium text-white mb-2">
                                     Username
                                 </label>
@@ -285,23 +285,23 @@ const CreateAccount = () => {
                                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <MdPerson className="h-5 w-5 text-gray-400" />
                                     </div>
-                                    <input
-                                        type="text"
-                                        name="username"
+                        <input 
+                            type="text" 
+                            name="username"
                                         id="username"
-                                        value={formData.username}
-                                        onChange={handleInputChange}
-                                        placeholder="Choose a username"
+                            value={formData.username}
+                            onChange={handleInputChange}
+                            placeholder="Choose a username" 
                                         className={`block w-full pl-12 pr-4 py-4 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 ${
                                             errors.username ? 'border-red-500' : 'border-white/20'
                                         }`}
-                                    />
+                        />
                                 </div>
-                                {errors.username && <p className="text-red-400 text-xs mt-1">{errors.username}</p>}
-                            </div>
+                        {errors.username && <p className="text-red-400 text-xs mt-1">{errors.username}</p>}
+                    </div>
 
                             {/* Email Field */}
-                            <div>
+                    <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                                     Email Address
                                 </label>
@@ -309,23 +309,23 @@ const CreateAccount = () => {
                                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <MdEmail className="h-5 w-5 text-gray-400" />
                                     </div>
-                                    <input
-                                        type="email"
-                                        name="email"
+                        <input 
+                            type="email" 
+                            name="email"
                                         id="email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
+                            value={formData.email}
+                            onChange={handleInputChange}
                                         placeholder="Enter your email"
                                         className={`block w-full pl-12 pr-4 py-4 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 ${
                                             errors.email ? 'border-red-500' : 'border-white/20'
                                         }`}
-                                    />
+                        />
                                 </div>
-                                {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
-                            </div>
+                        {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+                    </div>
 
                             {/* Password Field */}
-                            <div>
+                    <div>
                                 <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
                                     Password
                                 </label>
@@ -333,13 +333,13 @@ const CreateAccount = () => {
                                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <MdLock className="h-5 w-5 text-gray-400" />
                                     </div>
-                                    <input
+                        <input 
                                         type={showPassword ? 'text' : 'password'}
-                                        name="password"
+                            name="password"
                                         id="password"
-                                        value={formData.password}
-                                        onChange={handleInputChange}
-                                        placeholder="At least 6 characters"
+                            value={formData.password}
+                            onChange={handleInputChange}
+                            placeholder="At least 6 characters" 
                                         className={`block w-full pl-12 pr-12 py-4 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 ${
                                             errors.password ? 'border-red-500' : 'border-white/20'
                                         }`}
@@ -352,14 +352,14 @@ const CreateAccount = () => {
                                         {showPassword ? <FaEyeSlash className="h-5 w-5" /> : <FaEye className="h-5 w-5" />}
                                     </button>
                                 </div>
-                                {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password}</p>}
+                        {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password}</p>}
                                 <p className="text-xs text-gray-500 mt-1">
                                     <span className="text-yellow-400 font-bold">ℹ️</span> Passwords must be at least 6 characters.
-                                </p>
-                            </div>
+                        </p>
+                    </div>
 
                             {/* Confirm Password Field */}
-                            <div>
+                    <div>
                                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
                                     Confirm Password
                                 </label>
@@ -367,12 +367,12 @@ const CreateAccount = () => {
                                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <MdLock className="h-5 w-5 text-gray-400" />
                                     </div>
-                                    <input
+                        <input 
                                         type={showConfirmPassword ? 'text' : 'password'}
-                                        name="confirmPassword"
+                            name="confirmPassword"
                                         id="confirmPassword"
-                                        value={formData.confirmPassword}
-                                        onChange={handleInputChange}
+                            value={formData.confirmPassword}
+                            onChange={handleInputChange}
                                         placeholder="Confirm your password"
                                         className={`block w-full pl-12 pr-12 py-4 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 ${
                                             errors.confirmPassword ? 'border-red-500' : 'border-white/20'
@@ -386,32 +386,32 @@ const CreateAccount = () => {
                                         {showConfirmPassword ? <FaEyeSlash className="h-5 w-5" /> : <FaEye className="h-5 w-5" />}
                                     </button>
                                 </div>
-                                {errors.confirmPassword && <p className="text-red-400 text-xs mt-1">{errors.confirmPassword}</p>}
-                            </div>
+                        {errors.confirmPassword && <p className="text-red-400 text-xs mt-1">{errors.confirmPassword}</p>}
+                    </div>
 
-                            {/* Error Message */}
-                            {error && (
+                    {/* Error Message */}
+                    {error && (
                                 <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-4">
                                     <p className="text-sm text-red-400">{error}</p>
-                                </div>
-                            )}
+                        </div>
+                    )}
 
                             {/* Create Account Button */}
-                            <button
-                                type="submit"
+                    <button 
+                        type="submit"
                                 disabled={loading || isSubmitting}
                                 className="w-full flex justify-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-lg font-semibold text-black bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
                             >
                                 {loading || isSubmitting ? (
                                     <div className="flex items-center">
                                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-3"></div>
-                                        Creating account...
-                                    </div>
-                                ) : (
-                                    'Create Account'
-                                )}
-                            </button>
-                        </form>
+                                Creating account...
+                            </div>
+                        ) : (
+                            'Create Account'
+                        )}
+                    </button>
+                </form>
 
                         {/* Divider */}
                         <div className="mt-8">
@@ -449,8 +449,8 @@ const CreateAccount = () => {
                             >
                                 Sign in
                             </Link>
-                        </p>
-                    </div>
+                </p>
+            </div>
 
                     {/* Terms and Privacy */}
                     <div className="text-center mt-6">

@@ -1,4 +1,28 @@
-# Environment Variables Setup
+# Frontend Environment Setup
+
+## Required Environment Variables
+
+Create a `.env` file in the frontend directory with the following variables:
+
+```env
+# Node.js Backend URL
+VITE_APP_BASE_URL=https://dev-ai-shop-backend.vercel.app/api/v1
+
+# Python Backend URL (for AI services)
+VITE_PYTHON_BACKEND_URL=https://dev-ai-shop-python-backend-5.onrender.com
+```
+
+## Environment Variable Details
+
+### VITE_APP_BASE_URL
+- **Purpose**: Base URL for the Node.js backend API
+- **Format**: `https://dev-ai-shop-backend.vercel.app/api/v1`
+- **Default fallback**: If the environment variable is not set, it will use `https://dev-ai-shop-backend.vercel.app/api/v1`
+
+### VITE_PYTHON_BACKEND_URL
+- **Purpose**: URL for the Python AI backend
+- **Format**: `https://dev-ai-shop-python-backend-5.onrender.com`
+- **Usage**: Used for AI-powered features like product recommendations
 
 ## 🚀 Quick Setup
 
@@ -10,7 +34,8 @@
 
 2. **Add the following content** to your `.env` file:
    ```env
-   VITE_APP_BASE_URL=http://localhost:5000/api/v1
+   VITE_APP_BASE_URL=https://dev-ai-shop-backend.vercel.app/api/v1
+   VITE_PYTHON_BACKEND_URL=https://dev-ai-shop-python-backend-5.onrender.com
    ```
 
 ## 📝 Manual Steps
@@ -28,7 +53,8 @@ If you can't create the `.env` file automatically, follow these steps:
 
 3. **Open the `.env` file** and add:
    ```env
-   VITE_APP_BASE_URL=http://localhost:5000/api/v1
+   VITE_APP_BASE_URL=https://dev-ai-shop-backend.vercel.app/api/v1
+   VITE_PYTHON_BACKEND_URL=https://dev-ai-shop-python-backend-5.onrender.com
    ```
 
 4. **Save the file**
@@ -36,7 +62,8 @@ If you can't create the `.env` file automatically, follow these steps:
 ## 🔧 Configuration Details
 
 - **VITE_APP_BASE_URL**: The base URL for your Node.js backend API
-- **Default fallback**: If the environment variable is not set, it will use `http://localhost:5000/api/v1`
+- **VITE_PYTHON_BACKEND_URL**: The base URL for your Python backend API
+- **Default fallback**: If the environment variable is not set, it will use `https://dev-ai-shop-backend.vercel.app/api/v1`
 
 ## ✅ Verification
 

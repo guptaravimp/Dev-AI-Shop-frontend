@@ -1,8 +1,10 @@
 // API Configuration
-export const API_BASE_URL = import.meta.env.VITE_APP_BASE_URL || 'http://localhost:5000/api/v1';
+export const API_BASE_URL = import.meta.env.VITE_APP_BASE_URL || 'https://dev-ai-shop-backend.vercel.app/api/v1';
 
 // Python Backend URL (for AI services)
-export const PYTHON_API_URL = 'http://localhost:5001';
+// TODO: Replace with your actual Render URL from your dashboard
+// For now, using localhost for testing
+export const PYTHON_API_URL = import.meta.env.VITE_PYTHON_API_URL || 'https://dev-ai-shop-python-backend-5.onrender.com';
 
 // API Endpoints
 export const API_ENDPOINTS = {

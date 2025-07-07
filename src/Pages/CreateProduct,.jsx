@@ -139,7 +139,7 @@ export default function CreateProduct() {
             
             if (response.data.success) {
                 setServerSuccess('Product created successfully! Redirecting to products...');
-                reset();
+            reset();
                 setImagePreview(null);
                 setUploadedImageUrl(null);
                 
@@ -340,12 +340,12 @@ export default function CreateProduct() {
 
                             {/* Product Details Grid */}
                             <div className="grid md:grid-cols-2 gap-6">
-                                {/* Product Name */}
-                                <div>
+                    {/* Product Name */}
+                    <div>
                                     <label className="block text-white font-semibold mb-2">
                                         Product Name *
                                     </label>
-                                    <input
+                        <input
                                         type="text"
                                         {...register('productName', { 
                                             required: 'Product name is required',
@@ -388,14 +388,14 @@ export default function CreateProduct() {
                                         </p>
                                     )}
                                 </div>
-                            </div>
+                    </div>
 
-                            {/* Description */}
-                            <div>
+                    {/* Description */}
+                    <div>
                                 <label className="block text-white font-semibold mb-2">
                                     Description *
                                 </label>
-                                <textarea
+                        <textarea
                                     {...register('description', { 
                                         required: 'Description is required',
                                         minLength: {
@@ -403,7 +403,7 @@ export default function CreateProduct() {
                                             message: 'Description must be at least 10 characters'
                                         }
                                     })}
-                                    rows={4}
+                            rows={4}
                                     className="w-full p-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300 resize-none"
                                     placeholder="Describe your product in detail..."
                                 />
@@ -413,18 +413,18 @@ export default function CreateProduct() {
                                         {errors.description.message}
                                     </p>
                                 )}
-                            </div>
+                    </div>
 
                             {/* Pricing Section */}
                             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                                 <h3 className="text-white font-semibold text-lg mb-4">Pricing Details</h3>
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {/* Original Price */}
-                                    <div>
+                    <div>
                                         <label className="block text-white font-medium mb-2">
                                             Original Price (₹) *
                                         </label>
-                                        <input
+                        <input
                                             type="number"
                                             step="0.01"
                                             min="0"
@@ -444,15 +444,15 @@ export default function CreateProduct() {
                                                 {errors.price.message}
                                             </p>
                                         )}
-                                    </div>
+                    </div>
 
                                     {/* Discount */}
-                                    <div>
+                        <div>
                                         <label className="block text-white font-medium mb-2">
                                             Discount (%)
                                         </label>
-                                        <input
-                                            type="number"
+                            <input
+                                type="number"
                                             step="1"
                                             min="0"
                                             max="100"
@@ -475,10 +475,10 @@ export default function CreateProduct() {
                                                 {errors.discount.message}
                                             </p>
                                         )}
-                                    </div>
+                        </div>
 
                                     {/* Final Price Display */}
-                                    <div>
+                        <div>
                                         <label className="block text-white font-medium mb-2">
                                             Final Price
                                         </label>
@@ -491,14 +491,14 @@ export default function CreateProduct() {
                                             </p>
                                         )}
                                     </div>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
 
                             {/* Submit Button */}
                             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
+                    <button
+                        type="submit"
+                        disabled={isSubmitting}
                                     className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                                 >
                                     {isSubmitting ? (
@@ -512,7 +512,7 @@ export default function CreateProduct() {
                                             List Product for Sale
                                         </>
                                     )}
-                                </button>
+                    </button>
 
                                 <button
                                     type="button"
@@ -537,7 +537,7 @@ export default function CreateProduct() {
                                     {serverError}
                                 </div>
                             )}
-                        </form>
+                </form>
                     </div>
 
                     {/* Tips Section */}

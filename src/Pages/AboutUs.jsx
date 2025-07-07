@@ -60,7 +60,7 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0F111A] via-[#1a1d2a] to-[#0F111A] text-white">
-      <Navbar/>
+        <Navbar/>
       
       {/* Hero Section */}
       <div className="pt-32 pb-16 px-6">
@@ -152,8 +152,8 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
+          </div>
         </div>
-      </div>
 
       {/* Team Section */}
       <div className="px-6 py-16">
@@ -164,8 +164,8 @@ const AboutUs = () => {
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               The brilliant minds behind our innovative solutions. We're passionate about technology and committed to excellence.
-            </p>
-          </div>
+          </p>
+        </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (

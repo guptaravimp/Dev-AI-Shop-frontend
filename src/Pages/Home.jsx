@@ -156,8 +156,8 @@ function Home() {
       // Speak welcome message when modal opens
       setTimeout(() => {
         console.log('Speaking welcome message in modal');
-        const welcomeMessage = `Welcome to Dev AI Shop, ${username}! I'm Sam, your AI shopping assistant. I can help you find products, compare prices, and make your shopping experience amazing. Just ask me anything!`;
-        speak(welcomeMessage);
+      const welcomeMessage = `Welcome to Dev AI Shop, ${username}! I'm Sam, your AI shopping assistant. I can help you find products, compare prices, and make your shopping experience amazing. Just ask me anything!`;
+      speak(welcomeMessage);
       }, 800); // Delay to match animation duration
     }, 1000);
     

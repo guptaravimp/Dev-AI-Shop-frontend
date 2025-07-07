@@ -1,0 +1,11 @@
+# Frontend Environment Variables
+
+# Node.js Backend URL
+VITE_APP_BASE_URL=https://dev-ai-shop-backend.vercel.app/api/v1
+
+# Python Backend URL (for AI services)
+# For local development:
+VITE_PYTHON_API_URL=https://dev-ai-shop-python-backend-5.onrender.com
+
+# For production (replace with your deployed Python backend URL):
+# VITE_PYTHON_API_URL=https://dev-ai-shop-python-backend-5.onrender.com 

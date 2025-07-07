@@ -15,6 +15,7 @@ import CreateAccount from './Pages/CreateAccount.jsx'
 import YourPurchases from './Pages/YourPurchases.jsx'
 import YourSellProducts from './Pages/YourSellProducts.jsx'
 import Checkout from './Pages/Checkout.jsx'
+import TestConnection from './Pages/TestConnection.jsx'
 import { initializeAuth } from './slices/authSlice'
 
 
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
   {
     path: '/checkout',
     element: <div><Checkout/></div>  
+  },
+  {
+    path: '/test-connection',
+    element: <div><TestConnection/></div>  
   },
 ])
 
